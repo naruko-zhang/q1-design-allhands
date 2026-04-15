@@ -162,10 +162,10 @@
     50% { opacity: 0.5; transform: scale(0.7); }
   }
   .hero-title {
-    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 900;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ffffff 0%, rgba(255,200,180,0.9) 40%, var(--accent) 100%);
     -webkit-background-clip: text;
@@ -637,6 +637,106 @@
     .ai-cards { grid-template-columns: 1fr; }
   }
 
+  /* ─── 2026 PLAN SECTION ─── */
+  #plan-2026 { background: var(--bg); }
+
+  .plan-hero {
+    background: linear-gradient(135deg, rgba(255,95,46,0.06), rgba(255,95,46,0.02));
+    border: 1px solid rgba(255,95,46,0.15);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .plan-hero-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  .plan-hero h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .plan-hero p {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+  .plan-image-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .plan-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  /* ─── ACTION PLAN SECTION ─── */
+  #action-plan { background: var(--bg2); }
+
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    .action-grid { grid-template-columns: 1fr; }
+  }
+  .action-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .action-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .action-card:hover {
+    border-color: rgba(255,95,46,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(255,95,46,0.12);
+  }
+  .action-card:hover::before { opacity: 1; }
+  .action-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    background: rgba(255,95,46,0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .action-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+  }
+  .action-card p {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
   /* ─── AGENDA SECTION ─── */
   #agenda { background: var(--bg); }
 
@@ -766,6 +866,8 @@
     <li><a href="#biz">业务大盘</a></li>
     <li><a href="#contrib">产设做了什么</a></li>
     <li><a href="#ai">AI赋能</a></li>
+    <li><a href="#plan-2026">2026规划</a></li>
+    <li><a href="#action-plan">Q2行动纲领</a></li>
     <li><a href="#agenda">今日议程</a></li>
   </ul>
 </nav>
@@ -777,7 +879,7 @@
   <div class="orb orb2"></div>
   <div class="hero-content fade-in">
     <div class="hero-tag">Q1 全员会 · 产品设计中心开场</div>
-    <h1 class="hero-title">高质高效完成大考<br>AI 全面渗透运营生产力</h1>
+    <h1 class="hero-title">高质高效完成 26CNY 大考，AI 能力全面渗透至活动搭建、内容生产与供给提效，以"智能运营"为牵引，开启组织能力升级新篇章。</h1>
     <p class="hero-sub">
       <strong>基础供给 · 心智供给 · 品牌修复 · AI 赋能</strong><br>
       内容运营部 · 产品 &amp; 设计团队 · 2026 Q1
@@ -1077,12 +1179,62 @@
   </div>
 </section>
 
+<!-- ═══ 2026 PLAN SECTION ═══ -->
+<section id="plan-2026">
+  <div class="sec-head fade-in">
+    <div class="sec-num">04 · 2026年规划</div>
+    <div class="divider"></div>
+    <h2 class="sec-title">明确方向，<span class="hl">聚焦关键战场</span></h2>
+    <p class="sec-desc">产品设计 · 2026年度规划全景图</p>
+  </div>
+
+  <div class="plan-image-container fade-in">
+    <img src="https://bs3-hb1.corp.kuaishou.com/upload-kwaipilot-chat-file/chat/2026-04-15/735f7da2545d4772ae2246070c93f6aa.jpg" alt="2026年规划" class="plan-image">
+  </div>
+</section>
+
+<!-- ═══ ACTION PLAN SECTION ═══ -->
+<section id="action-plan">
+  <div class="sec-head fade-in">
+    <div class="sec-num">05 · Q2行动纲领</div>
+    <div class="divider"></div>
+    <h2 class="sec-title">明确方向，<span class="hl">聚焦关键动作</span></h2>
+    <p class="sec-desc">Q2我们将围绕四个核心原则，推动产设团队与业务更紧密咬合</p>
+  </div>
+
+  <div class="action-grid fade-in">
+    <div class="action-card">
+      <span class="action-num">01</span>
+      <h3>业务结果导向</h3>
+      <p>过程再炫，最终要看业务指标有没有实质提升</p>
+    </div>
+
+    <div class="action-card">
+      <span class="action-num">02</span>
+      <h3>主动协同，打破边界</h3>
+      <p>产设只是大业务的一环，要和各方更紧密咬合，才能攻下更高目标</p>
+    </div>
+
+    <div class="action-card">
+      <span class="action-num">03</span>
+      <h3>主动拥抱AI</h3>
+      <p>不要憋大招，不要等完美，找场景先落地</p>
+    </div>
+
+    <div class="action-card">
+      <span class="action-num">04</span>
+      <h3>顺势而为</h3>
+      <p>不要有太重的历史包袱，但要有自己的判断</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ AGENDA SECTION ═══ -->
 <section id="agenda">
   <div class="sec-head fade-in">
-    <div class="sec-num">04 · 今日议程</div>
+    <div class="sec-num">05 · 今日议程</div>
     <div class="divider"></div>
-    <h2 class="sec-title">接下来，让各 Leader <span class="hl">带你深入现场</span></h2>
+    <h2 class="sec-title">接下来，让各方向负责人<span class="hl">带你深入现场</span></h2>
     <p class="sec-desc">宏观介绍到此结束，下面我们将听各负责人分享 Q1 具体场景的总结与 Q2 规划</p>
   </div>
 
@@ -1093,7 +1245,7 @@
         <h3>基础供给 · 创作者产品与补贴策略</h3>
         <p>创中 DAU 增长路径、数据工具体系建设、智能补贴从 MVP 走向规模化</p>
       </div>
-      <span class="agenda-tag">产品组</span>
+      <span class="agenda-tag">创中产品组</span>
     </div>
 
     <div class="agenda-item">
@@ -1117,27 +1269,19 @@
     <div class="agenda-item">
       <div class="agenda-idx">04</div>
       <div class="agenda-body">
-        <h3>体验 &amp; 创意设计 · AI 驱动的设计新范式</h3>
-        <p>CNY 全场视觉交付、AI×UX 流程进展、IP 品牌建设、Q2 设计侧规划</p>
+        <h3>体验设计 · AI 驱动的设计新范式</h3>
+        <p>CNY 全场视觉交付、AI×UX 流程进展、Q2 体验设计规划</p>
       </div>
-      <span class="agenda-tag">设计组</span>
+      <span class="agenda-tag">体验设计组</span>
     </div>
-  </div>
-</section>
 
-<!-- ═══ CLOSING ═══ -->
-<section id="closing">
-  <div class="closing-content fade-in">
-    <p class="closing-quote">过程再炫，最终要看业务指标<br>有没有实质提升</p>
-    <p class="closing-sub">
-      Q1 产设团队以更少的投入，交付了更多的业务价值。<br>
-      Q2，我们将在暑期大考、世界杯、AI 赋能平台等方向全力以赴。
-    </p>
-    <div class="closing-pills">
-      <span class="pill">业务结果导向</span>
-      <span class="pill">主动协同 打破边界</span>
-      <span class="pill">主动拥抱 AI</span>
-      <span class="pill">顺势而为</span>
+    <div class="agenda-item">
+      <div class="agenda-idx">05</div>
+      <div class="agenda-body">
+        <h3>创意视觉 · IP 品牌与垂类建设</h3>
+        <p>IP 形象设计、垂类品牌视觉、CNY 年味主视觉、Q2 创意视觉规划</p>
+      </div>
+      <span class="agenda-tag">创意视觉组</span>
     </div>
   </div>
 </section>
